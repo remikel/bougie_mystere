@@ -1,0 +1,112 @@
+body {
+    font-family: "Quicksand", sans-serif;
+    color: #442667;
+}
+
+.section-rm {
+    text-align: center;
+    width: 100%;
+    background-image: url("./images/background/bg.jpg");
+    background-position: center;
+    z-index: 99;
+}
+.felicitation{
+    padding:10px;
+    /* background-image: url("./images/background/bg2.jpg");
+    background-position: center; */
+}
+.try,
+.answer {
+    display: none;
+    color: #442667;
+    font-size: 2em;
+    line-height: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 100px;
+}
+
+#solution2 {
+    z-index: 200;
+}
+
+.flex-container {
+    max-width: 1080px;
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.btn {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #442667;
+    font-size: 20px;
+    background: #f5b713;
+    padding: 10px 20px 10px 20px;
+    border: solid #442667 2px;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    max-width: 200px;
+}
+
+.btn:hover {
+    background: #442667;
+    color: #f5b713;
+    text-decoration: none;
+    cursor: pointer;
+}
+input,
+select {
+    margin-bottom: 15px;
+    width: 300px;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.css-input {
+    padding: 9px;
+    font-size: 24px;
+    border-width: 1px;
+    border-color: #442667;
+    background-color: #f8f8f8;
+    color: #442667;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px rgba(66, 66, 66, 0.75);
+    text-shadow: 0px 0px 0px rgba(66, 66, 66, 0.75);
+}
+
+.css-input:focus {
+    outline: none;
+}
+
+#error {
+    margin-top: 20px;
+    display: none;
+    background-color: #f5b713;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+.purple {
+    background-color: #f5b713;
+    background: rgb(35, 163, 125);
+    background: linear-gradient(90deg, rgba(35, 163, 125, 1) 3%, rgba(255, 135, 105, 1) 22%, rgba(221, 13, 13, 1) 89%);
+}

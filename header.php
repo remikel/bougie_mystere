@@ -335,24 +335,12 @@
         .woocommerce form .form-row .required {
             visibility: visible;
         }
-    </style>
-    <link rel='stylesheet' id='jupiterx-css' href='https://noemiepulido-graphiste.com/wp-content/uploads/jupiterx/compiler/jupiterx/04e203d.css?ver=1.26.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-all-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-menu/assets/public/lib/font-awesome/css/all.min.css?ver=5.12.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-v4-shims-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-menu/assets/public/lib/font-awesome/css/v4-shims.min.css?ver=5.12.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='jet-menu-public-styles-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-menu/assets/public/css/public.css?ver=2.1.3' type='text/css' media='all' />
-    <link rel='stylesheet' id='jet-woo-builder-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-woo-builder/assets/css/jet-woo-builder.css?ver=1.10.5' type='text/css' media='all' />
-    <style id='jet-woo-builder-inline-css' type='text/css'>
-        @font-face {
-            font-family: "WooCommerce";
-            src: url("https://noemiepulido-graphiste.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot");
-            src: url("https://noemiepulido-graphiste.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix") format("embedded-opentype"),
-                url("https://noemiepulido-graphiste.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff") format("woff"),
-                url("https://noemiepulido-graphiste.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf") format("truetype"),
-                url("https://noemiepulido-graphiste.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce") format("svg");
-            font-weight: normal;
-            font-style: normal;
+        ul{
+            list-style:none;
         }
     </style>
+    <link rel='stylesheet' id='jet-menu-public-styles-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-menu/assets/public/css/public.css?ver=2.1.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='jet-woo-builder-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-woo-builder/assets/css/jet-woo-builder.css?ver=1.10.5' type='text/css' media='all' />
     <link rel='stylesheet' id='jet-woo-builder-frontend-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-woo-builder/assets/css/lib/jetwoobuilder-frontend-font/css/jetwoobuilder-frontend-font.css?ver=1.10.5' type='text/css' media='all' />
     <link rel='stylesheet' id='jet-woo-builder-jupiterx-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-woo-builder/includes/integrations/themes/jupiterx/assets/css/style.css?ver=1.10.5' type='text/css' media='all' />
     <link rel='stylesheet' id='jupiterx-elements-dynamic-styles-css' href='https://noemiepulido-graphiste.com/wp-content/uploads/jupiterx/compiler/jupiterx-elements-dynamic-styles/32c8542.css?ver=1.26.0' type='text/css' media='all' />
@@ -361,22 +349,10 @@
     <link rel='stylesheet' id='elementor-icons-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.13.0' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-legacy-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.7' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.7' type='text/css' media='all' />
-    <style id='elementor-frontend-inline-css' type='text/css'>
-        @font-face {
-            font-family: eicons;
-            src: url(https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
-            src: url(https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
-            font-weight: 400;
-            font-style: normal
-        }
-    </style>
-    <link rel='stylesheet' id='font-awesome-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
     <link rel='stylesheet' id='jupiterx-core-raven-frontend-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jupiterx-core/includes/extensions/raven/assets/css/frontend.min.css?ver=5.8.2' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-post-1290-css' href='https://noemiepulido-graphiste.com/wp-content/uploads/elementor/css/post-1290.css?ver=1636388155' type='text/css' media='all' />
     <link rel='stylesheet' id='jet-tabs-frontend-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-tabs/assets/css/jet-tabs-frontend.css?ver=2.1.13' type='text/css' media='all' />
     <link rel='stylesheet' id='jet-tricks-frontend-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/jet-tricks/assets/css/jet-tricks-frontend.css?ver=1.3.8' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-5-all-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.4.7' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-4-shim-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.4.7' type='text/css' media='all' />
     <link rel='stylesheet' id='flatpickr-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.css?ver=4.1.4' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-global-css' href='https://noemiepulido-graphiste.com/wp-content/uploads/elementor/css/global.css?ver=1636388157' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-post-11-css' href='https://noemiepulido-graphiste.com/wp-content/uploads/elementor/css/post-11.css?ver=1636388613' type='text/css' media='all' />
@@ -384,9 +360,6 @@
     <link rel='stylesheet' id='elementor-post-96-css' href='https://noemiepulido-graphiste.com/wp-content/uploads/elementor/css/post-96.css?ver=1636388157' type='text/css' media='all' />
     <link rel='stylesheet' id='cmplz-cookie-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/complianz-gdpr/assets/css/cookieconsent.min.css?ver=5.5.2' type='text/css' media='all' />
     <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CQuicksand%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSource+Sans+Pro%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.8.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://noemiepulido-graphiste.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css' media='all' />
     <script type='text/javascript' src='https://noemiepulido-graphiste.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
     <script type='text/javascript' src='https://noemiepulido-graphiste.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
     <script type='text/javascript' src='https://noemiepulido-graphiste.com/wp-content/themes/jupiterx/lib/assets/dist/js/utils.min.js?ver=1.26.0' id='jupiterx-utils-js'></script>
@@ -538,14 +511,12 @@
         /*.navigation-header .fa-navicon:hover:before,
 .navigation-header .fa-reorder:hover:before,
 .navigation-header .fa-bars:hover:before{
-	background: url('/wp-content/uploads/2019/07/menu-anime.jpg');
 	background-repeat: no-repeat;
 	height: 50px;
 	width: 50px;
 }*/
 
         .navigation-header .raven-nav-menu-toggle-button {
-            background: url('/wp-content/uploads/2019/07/menu-anime.jpg') 100% center;
             background-repeat: no-repeat;
             height: 50px;
             width: 50px;
@@ -1206,14 +1177,12 @@
         /*.navigation-header .fa-navicon:hover:before,
 .navigation-header .fa-reorder:hover:before,
 .navigation-header .fa-bars:hover:before{
-	background: url('/wp-content/uploads/2019/07/menu-anime.jpg');
 	background-repeat: no-repeat;
 	height: 50px;
 	width: 50px;
 }*/
 
-        .navigation-header .raven-nav-menu-toggle-button {
-            background: url('/wp-content/uploads/2019/07/menu-anime.jpg') 100% center;
+        .navigation-header .raven-nav-menu-toggle-button {100% center;
             background-repeat: no-repeat;
             height: 50px;
             width: 50px;
@@ -1617,7 +1586,7 @@
     </style>
 </head>
 
-<body data-rsssl=1 data-cmplz=1 class="home page-template-default page page-id-11 no-js theme-jupiterx woocommerce-no-js jet-desktop-menu-active elementor-default elementor-kit-1290 elementor-page elementor-page-11" itemscope="itemscope" itemtype="http://schema.org/WebPage"><a class="jupiterx-a11y jupiterx-a11y-skip-navigation-link" href="#jupiterx-main">Skip to content</a>
+<body data-rsssl=1 data-cmplz=1 class="home page-template-default page page-id-11 no-js theme-jupiterx woocommerce-no-js jet-desktop-menu-active elementor-default elementor-kit-1290 elementor-page elementor-page-11" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <div class="jupiterx-site">
         <header class="jupiterx-header jupiterx-header-custom" data-jupiterx-settings="{&quot;breakpoint&quot;:&quot;767.98&quot;,&quot;template&quot;:&quot;44&quot;}" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
             <div data-elementor-type="header" data-elementor-id="44" class="elementor elementor-44" data-elementor-settings="[]">
@@ -1627,91 +1596,6 @@
                             <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
                                     <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-421c240" data-id="421c240" data-element_type="column">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-5fb64f7 raven-breakpoint-desktop navigation-header elementor-hidden-phone raven-mobile-nav-menu-align-left elementor-widget elementor-widget-raven-nav-menu" data-id="5fb64f7" data-element_type="widget" data-settings="{&quot;mobile_layout&quot;:&quot;side&quot;,&quot;menu_container_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:390,&quot;sizes&quot;:[]},&quot;side_menu_effect&quot;:&quot;overlay&quot;,&quot;side_menu_alignment&quot;:&quot;left&quot;,&quot;menu_container_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_container_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="raven-nav-menu.default">
-                                                    <div class="elementor-widget-container">
-                                                        <nav class="raven-nav-menu-main raven-nav-menu-horizontal raven-nav-menu-tablet-horizontal raven-nav-menu-mobile-horizontal raven-nav-icons-hidden-desktop raven-nav-icons-hidden-tablet raven-nav-icons-hidden-mobile">
-                                                            <ul id="menu-5fb64f7" class="raven-nav-menu">
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-11 current_page_item menu-item-33"><a href="https://noemiepulido-graphiste.com/" aria-current="page" class="raven-menu-item raven-link-item  raven-menu-item-active">Accueil</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1827"><a href="https://noemiepulido-graphiste.com/shop/" class="raven-menu-item raven-link-item ">Shop</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://noemiepulido-graphiste.com/votre-logo/" class="raven-menu-item raven-link-item ">Co-création de logo</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="https://noemiepulido-graphiste.com/mon-portfolio/" class="raven-menu-item raven-link-item ">Mon portfolio</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1408"><a href="https://noemiepulido-graphiste.com/logos-a-adopter/" class="raven-menu-item raven-link-item ">Les logos à adopter</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="https://noemiepulido-graphiste.com/temoignages/" class="raven-menu-item raven-link-item ">Témoignages</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="https://noemiepulido-graphiste.com/contact/" class="raven-menu-item raven-link-item ">Contact</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-37"><a href="https://noemiepulido-graphiste.com/mentions-legales/" class="raven-menu-item raven-link-item ">Mentions légales</a></li>
-                                                            </ul>
-                                                        </nav>
-
-                                                        <div class="raven-nav-menu-toggle">
-
-                                                            <div class="raven-nav-menu-toggle-button ">
-                                                                <span class="fa fa-bars"></span>
-                                                            </div>
-
-                                                        </div>
-                                                        <nav class="raven-nav-icons-hidden-desktop raven-nav-icons-hidden-tablet raven-nav-icons-hidden-mobile raven-nav-menu-mobile raven-nav-menu-side">
-                                                            <div class="raven-nav-menu-close-button">
-                                                                <span class="raven-nav-menu-close-icon">&times;</span>
-                                                            </div>
-                                                            <div class="raven-container">
-                                                                <ul id="menu-mobile-5fb64f7" class="raven-nav-menu">
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-11 current_page_item menu-item-33"><a href="https://noemiepulido-graphiste.com/" aria-current="page" class="raven-menu-item raven-link-item  raven-menu-item-active">Accueil</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1827"><a href="https://noemiepulido-graphiste.com/shop/" class="raven-menu-item raven-link-item ">Shop</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://noemiepulido-graphiste.com/votre-logo/" class="raven-menu-item raven-link-item ">Co-création de logo</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="https://noemiepulido-graphiste.com/mon-portfolio/" class="raven-menu-item raven-link-item ">Mon portfolio</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1408"><a href="https://noemiepulido-graphiste.com/logos-a-adopter/" class="raven-menu-item raven-link-item ">Les logos à adopter</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="https://noemiepulido-graphiste.com/temoignages/" class="raven-menu-item raven-link-item ">Témoignages</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="https://noemiepulido-graphiste.com/contact/" class="raven-menu-item raven-link-item ">Contact</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-37"><a href="https://noemiepulido-graphiste.com/mentions-legales/" class="raven-menu-item raven-link-item ">Mentions légales</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </nav>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-35933de raven-breakpoint-desktop elementor-hidden-desktop elementor-hidden-tablet menu-responsive-right raven-nav-menu-stretch raven-mobile-nav-menu-align-left elementor-widget elementor-widget-raven-nav-menu" data-id="35933de" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;mobile_layout&quot;:&quot;dropdown&quot;}" data-widget_type="raven-nav-menu.default">
-                                                    <div class="elementor-widget-container">
-                                                        <nav class="raven-nav-menu-main raven-nav-menu-horizontal raven-nav-menu-tablet-horizontal raven-nav-menu-mobile-horizontal raven-nav-icons-hidden-desktop raven-nav-icons-hidden-tablet raven-nav-icons-hidden-mobile">
-                                                            <ul id="menu-35933de" class="raven-nav-menu">
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-11 current_page_item menu-item-1790"><a href="https://noemiepulido-graphiste.com/" aria-current="page" class="raven-menu-item raven-link-item  raven-menu-item-active">Accueil</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828"><a href="https://noemiepulido-graphiste.com/shop/" class="raven-menu-item raven-link-item ">Shop</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1794"><a href="https://noemiepulido-graphiste.com/votre-logo/" class="raven-menu-item raven-link-item ">Co-création de logo</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1793"><a href="https://noemiepulido-graphiste.com/mon-portfolio/" class="raven-menu-item raven-link-item ">Mon portfolio</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791"><a href="https://noemiepulido-graphiste.com/logos-a-adopter/" class="raven-menu-item raven-link-item ">Logos à adopter</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1796"><a href="https://noemiepulido-graphiste.com/temoignages/" class="raven-menu-item raven-link-item ">Témoignages</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1795"><a href="https://noemiepulido-graphiste.com/contact/" class="raven-menu-item raven-link-item ">Contact</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1797"><a href="https://noemiepulido-graphiste.com/panier/" class="raven-menu-item raven-link-item ">Panier</a></li>
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1792"><a href="https://noemiepulido-graphiste.com/mentions-legales/" class="raven-menu-item raven-link-item ">Mentions légales</a></li>
-                                                            </ul>
-                                                        </nav>
-
-                                                        <div class="raven-nav-menu-toggle">
-
-                                                            <div class="raven-nav-menu-toggle-button ">
-                                                                <span class="fa fa-bars"></span>
-                                                            </div>
-
-                                                        </div>
-                                                        <nav class="raven-nav-icons-hidden-desktop raven-nav-icons-hidden-tablet raven-nav-icons-hidden-mobile raven-nav-menu-mobile raven-nav-menu-dropdown">
-                                                            <div class="raven-container">
-                                                                <ul id="menu-mobile-35933de" class="raven-nav-menu">
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-11 current_page_item menu-item-1790"><a href="https://noemiepulido-graphiste.com/" aria-current="page" class="raven-menu-item raven-link-item  raven-menu-item-active">Accueil</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828"><a href="https://noemiepulido-graphiste.com/shop/" class="raven-menu-item raven-link-item ">Shop</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1794"><a href="https://noemiepulido-graphiste.com/votre-logo/" class="raven-menu-item raven-link-item ">Co-création de logo</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1793"><a href="https://noemiepulido-graphiste.com/mon-portfolio/" class="raven-menu-item raven-link-item ">Mon portfolio</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791"><a href="https://noemiepulido-graphiste.com/logos-a-adopter/" class="raven-menu-item raven-link-item ">Logos à adopter</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1796"><a href="https://noemiepulido-graphiste.com/temoignages/" class="raven-menu-item raven-link-item ">Témoignages</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1795"><a href="https://noemiepulido-graphiste.com/contact/" class="raven-menu-item raven-link-item ">Contact</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1797"><a href="https://noemiepulido-graphiste.com/panier/" class="raven-menu-item raven-link-item ">Panier</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1792"><a href="https://noemiepulido-graphiste.com/mentions-legales/" class="raven-menu-item raven-link-item ">Mentions légales</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </nav>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1076a2c" data-id="1076a2c" data-element_type="column">
                                         <div class="elementor-column-wrap elementor-element-populated">

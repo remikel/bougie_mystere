@@ -1,31 +1,47 @@
 <?php include 'header.php'; ?>
-<div style="margin-left:auto;margin-right:auto;text-align:center">
-    <a href="#" id="valid" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-        <span class="elementor-button-content-wrapper">
-                <span class="elementor-button-text">J'ai trouvé le code</span>
-        </span>
-    </a>
-    <a href="#" id="valid" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-        <span class="elementor-button-content-wrapper">
-                <span class="elementor-button-text">Je veux la solution</span>
-        </span>
-    </a>
-
-    <div class="elementor-button-wrapper">
-        <input type="text" id="code" pattern="2547">
-        <a href="#" id="valid" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-            <span class="elementor-button-content-wrapper">
-                <span class="elementor-button-text">Valider</span>
-            </span>
-        </a>
+<div class="section-rm">
+    <div class="flex-container">
+        <button class="btn base" id="try2">
+            J'ai trouvé le code
+        </button>
+        <div class="answer" id="solution2">
+            2547
+        </div>
+        <button class="btn base" id="solution">
+            Je veux la solution
+        </button>
+        <div class="try">
+            <div>
+                <input class="css-input" type="text" placeholder="Entre le code" id="code">
+                <button class="btn" id="go">
+                    Envoyer
+                </button>
+                <div id="error">Ce n'est pas ça ! Essaie encore !</div>
+            </div>
+        </div>
     </div>
 </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <script>
-    $('code').on('change', ()=>{
-        console.log($(this).val())
+    $('#solution').on('click', () => {
+        $('#solution2').fadeIn(500).fadeOut(5000)
+    })
+    $('#try2').on('click', () => {
+        $('.base').fadeOut()
+        $('.try').fadeIn()
+    })
+    $('#go').on('click', () => {
+        if ($('#code').val() == '2547') {
+            window.location.href = "/questionnaire.php";
+        } else {
+            $('#error').fadeIn(3000).fadeOut(3000)
+        }
     })
 </script>
 <?php include 'footer.php'; ?>
