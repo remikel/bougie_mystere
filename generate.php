@@ -43,7 +43,8 @@ function wrap($fontSize, $angle, $fontFace, $string, $width)
     return $ret;
 }
 // Création des instances d'image
-$dest = imagecreatefromjpeg('./images/full.jpg');
+// $dest = imagecreatefromjpeg('./images/full.jpg');
+$dest = imagecreate(2315, 3307);
 
 $primary = imagecolorallocate($dest, 0, 0, 0);
 $fontAmatic = './fonts/AmaticSC-Bold.ttf';
