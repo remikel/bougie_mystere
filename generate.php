@@ -21,6 +21,7 @@ function imagecopymerge_alpha($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, 
     // insert cut resource to destination image
     imagecopymerge($dst_im, $cut, $dst_x, $dst_y, 0, 0, $src_w, $src_h, $pct);
 }
+
 function wrap($fontSize, $angle, $fontFace, $string, $width)
 {
 
@@ -146,7 +147,7 @@ if (strlen($title) >= 35) {
 }
 
 // Date
-imagettftext($dest, 180, 0, 1400, 240, $primary, $fontQuick, "88.88.88");
+imagettftext($dest, 180, 0, 1400, 240, $primary, $fontQuick, date('d.n.Y'));
 
 // Hashtag
 $hashtag = "#" . $_POST['hashtag'];
