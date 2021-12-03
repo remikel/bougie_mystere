@@ -47,8 +47,6 @@
                             <option value="grue">Grue</option>
                             <option value="Panda">Panda</option>
                         </select>
-
-
                         <div>Pour te déplacer aujourd’hui tu préfères :</div>
                         <select required name="transports" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
@@ -87,11 +85,7 @@
                             <option value="plongee">La natation</option>
                             <option value="escalade">L’escalade</option>
                             <option value="tennis">Le tennis</option>
-
                         </select>
-
-
-
                         <div>Là tout de suite si tu devais te faire plaisir avec un dessert tu choisirais :</div>
                         <select required name="desserts" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
@@ -106,7 +100,6 @@
                             <option value="dango">Un dango</option>
                             <option value="cupcake">Un cupcake</option>
                             <option value="cannele">Des cannelés</option>
-
                         </select>
 
                         <div>Le dernier film qui t'a retourné :</div>
@@ -130,19 +123,13 @@
                             <option value="chanvre">Le chanvre</option>
                             <option value="erable">L’érable</option>
                             <option value="ginkgo">Le ginkgo</option>
-
                         </select>
-
-
-
-
                         <div>Ta boisson fétiche du moment :</div>
                         <select required name="boissons" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
                             <option value="cafe">Le café, parce que t’es un adulte, un vrai</option>
                             <option value="choco">Le chocolat chaud, toujours réconfortant</option>
                             <option value="the">Le thé, parce que oui, tu es raffiné</option>
-
                         </select>
 
                         <div>Ton chiffre porte-bonheur :</div>
@@ -159,8 +146,6 @@
                             <option value="8">8</option>
                             <option value="9">9</option>
                         </select>
-
-
                         <div class="titre">Quel ambiance te plait ? </div>
                         <select required name="color" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
@@ -181,8 +166,6 @@
                         <br /><button class="btn etape_precedente" etape="4">Précédente</button>
                         <input type="submit" class="btn" value="Générer l'image"></input>
                     </div>
-
-
                 </div>
             </form>
         </div>
@@ -194,8 +177,6 @@
 
 <script>
     $(document).ready(function() {
-
-
         $(".etape_suivante").click(function() {
             var etape_actuelle = $(this).attr('etape');
             var etape_suivante = parseInt(etape_actuelle) + 1;
