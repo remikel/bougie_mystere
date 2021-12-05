@@ -1,8 +1,6 @@
-<?php include 'header.php'; ?>
-<?php if ($_GET['code'] != '2547') {
-    header('Location: index.php?code=2547');
-}
+<?php include 'header.php'; 
 ?>
+
 <link href="style.css" rel="stylesheet">
 
 <div class="flex-container">
@@ -45,7 +43,7 @@
                             <option value="elephant">Eléphant</option>
                             <option value="renard">Renard</option>
                             <option value="grue">Grue</option>
-                            <option value="Panda">Panda</option>
+                            <option value="panda">Panda</option>
                         </select>
                         <div>Pour te déplacer aujourd’hui tu préfères :</div>
                         <select required name="transports" id="pet-select" class="champtxt" required>
@@ -69,7 +67,7 @@
 
                     <div id="etape2_recherche" class="div_cache" style="display:none; text-align:center;">
                         <div>Hashtage de ta journée :</div>
-                        <input required type="text" name="hashtag" value="" maxlength="12" placeholder="" class="champtxt" />
+                        <input required type="text" name="hashtag" value="" maxlength="14" placeholder="" class="champtxt" />
 
                         <div>Ton sport préféré, ce serait :</div>
                         <select required name="sports" id="pet-select" class="champtxt" required>
@@ -114,7 +112,7 @@
                         <input required type="text" name="gros_mot" value="" placeholder="" maxlength="25" class="champtxt" />
 
                         <div>Une plante qui te correspond bien :</div>
-                        <select required name="plante1" id="pet-select" class="champtxt" required>
+                        <select required name="plantes" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
                             <option value="pin">Le pin</option>
                             <option value="tropical">Le monstera (plante tropicale)</option>
@@ -149,12 +147,15 @@
                         <div class="titre">Quel ambiance te plait ? </div>
                         <select required name="color" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
-                            <option value="BLEU" style="background: #00435a"></option>
-                            <option value="ROSE" style="background: #e84121"></option>
-                            <option value="VERT" style="background: #00b96b"></option>
-                            <option value="VIOLET" style="background: #a148b5"></option>
-                            <option value="JAUNE" style="background: #ff6100"></option>
+                            <option value="BLEU" style="background: #00435a">Bleu</option>
+                            <option value="ROSE" style="background: #e84121">Rouge/Rose</option>
+                            <option value="VERT" style="background: #00b96b">Vert</option>
+                            <option value="VIOLET" style="background: #a148b5">Violet</option>
+                            <option value="JAUNE" style="background: #ff6100">Jaune orangé</option>
                         </select>
+
+                        <div>Ton e-mail pour terminer :</div>
+                        <input required type="email" name="email" value="" placeholder="" maxlength="25" class="champtxt" />
 
                         <br /><button class="btn etape_precedente" etape="3">Précédente</button>
                         <button class="btn etape_suivante" etape="3">Suivante</button>

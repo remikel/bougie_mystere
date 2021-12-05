@@ -38,7 +38,7 @@
     })
     $('#go').on('click', () => {
         if ($('#code').val() == '2547') {
-            window.location.href = "/questionnaire.php";
+            window.location.href = "/bougie/questionnaire.php";
         } else {
             $('#error').fadeIn(3000).fadeOut(3000)
         }

@@ -45,8 +45,35 @@ function wrap($fontSize, $angle, $fontFace, $string, $width)
 // Création des instances d'image
 // $dest = imagecreatefromjpeg('./images/full.jpg');
 $dest = imagecreate(2315, 3307);
-
-$primary = imagecolorallocate($dest, 0, 0, 0);
+$white = imagecolorallocate($dest, 255, 255, 255);
+switch ($_POST['color']) {
+    case 'BLEU':
+        $primary = imagecolorallocate($dest, 0, 67, 90);
+        $secondary = imagecolorallocate($dest, 0, 220, 235);
+        $tertiary = imagecolorallocate($dest, 0, 253, 217);
+        break;
+    case 'VERT':
+        $primary = imagecolorallocate($dest, 0, 185, 107);
+        $secondary = imagecolorallocate($dest, 229, 245, 221);
+        $tertiary = imagecolorallocate($dest, 0, 92, 21);
+        break;
+    case 'ROSE':
+        $primary = imagecolorallocate($dest, 232, 65, 33);
+        $secondary = imagecolorallocate($dest, 249, 216, 214);
+        $tertiary = imagecolorallocate($dest, 233, 153, 0);
+        break;
+    case 'JAUNE':
+        $primary = imagecolorallocate($dest, 255, 97, 0);
+        $secondary = imagecolorallocate($dest, 255, 181, 0);
+        $tertiary = imagecolorallocate($dest, 164, 16, 156);
+        break;
+    case 'VIOLET':
+        $primary = imagecolorallocate($dest, 161, 72, 181);
+        $secondary = imagecolorallocate($dest, 232, 206, 253);
+        $tertiary = imagecolorallocate($dest, 255, 208, 0);
+        break;
+}
+$white = imagecolorallocate($dest, 255, 255, 255);
 $fontAmatic = './fonts/AmaticSC-Bold.ttf';
 $fontQuick = './fonts/Quicksand-Bold.ttf';
 
@@ -54,116 +81,122 @@ $fontQuick = './fonts/Quicksand-Bold.ttf';
 
 // // Copie et fusionne
 //Animaux
-$src = imagecreatefrompng('./images/JAUNE/animaux/' . $_POST['animaux'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/animaux/' . $_POST['animaux'] . '.png');
 imagecopymerge_alpha($dest, $src, 830, 1105, 0, 0, 921, 925, 100);
 
 //Boisson
-$src = imagecreatefrompng('./images/JAUNE/boissons/' . $_POST['boissons'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/boissons/' . $_POST['boissons'] . '.png');
 imagecopymerge_alpha($dest, $src, 1737, 290, 0, 0, 577, 1101, 100);
 
 //Dessert
-$src = imagecreatefrompng('./images/JAUNE/desserts/' . $_POST['desserts'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/desserts/' . $_POST['desserts'] . '.png');
 imagecopymerge_alpha($dest, $src, 690, 2685, 0, 0, 738, 623, 100);
 
 //chiffres
-$src = imagecreatefrompng('./images/JAUNE/chiffres/' . $_POST['chiffres'] . '.png');
-imagecopymerge_alpha($dest, $src, 370, 2935, 0, 0, 326, 375, 100);
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/chiffres/' . $_POST['chiffres'] . '.png');
+imagecopymerge_alpha($dest, $src, 370, 2930, 0, 0, 326, 375, 100);
 
 //plante
-$src = imagecreatefrompng('./images/JAUNE/plantes1/' . $_POST['plantes'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/plantes1/' . $_POST['plantes'] . '.png');
 imagecopymerge_alpha($dest, $src, 10, 895, 0, 0, 1215, 210, 100);
-$src = imagecreatefrompng('./images/JAUNE/plantes2/' . $_POST['plantes'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/plantes3/' . $_POST['plantes'] . '.png');
 imagecopymerge_alpha($dest, $src, 6, 1657, 0, 0, 496, 554, 100);
-$src = imagecreatefrompng('./images/JAUNE/plantes3/' . $_POST['plantes'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/plantes2/' . $_POST['plantes'] . '.png');
 imagecopymerge_alpha($dest, $src, 1750, 1385, 0, 0, 573, 380, 100);
 
 //sport
-$src = imagecreatefrompng('./images/JAUNE/sport1/' . $_POST['sports'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/sports1/' . $_POST['sports'] . '.png');
 imagecopymerge_alpha($dest, $src, 805, 300, 0, 0, 1091, 811, 100);
-$src = imagecreatefrompng('./images/JAUNE/sport2/' . $_POST['sports'] . '.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/sports2/' . $_POST['sports'] . '.png');
 $src = imagescale($src, 230);
 imagecopymerge_alpha($dest, $src, 0, 2057, 0, 0, 230, 368, 100);
 
-//chiffres
-$src = imagecreatefrompng('./images/JAUNE/transports/' . $_POST['transports'] . '.png');
+//transport
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/transports/' . $_POST['transports'] . '.png');
 imagecopymerge_alpha($dest, $src, 1420, 2800, 0, 0, 892, 504, 100);
 
 
 //Film
-$src = imagecreatefrompng('./images/JAUNE/cinema/Film.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/film/Film.png');
 imagecopymerge_alpha($dest, $src, 0, 0, 0, 0, 1457, 1102, 100);
 $title = $_POST['film'];
 if (strlen($title) >= 52) {
-    imagettftext($dest, 60, 6, 120, 370, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 60, 6, 120, 370, $white, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 610));
 } else if (strlen($title) >= 35) {
-    imagettftext($dest, 70, 6, 120, 380, $primary, $fontAmatic, wrap(70, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 70, 6, 120, 380, $white, $fontAmatic, wrap(70, 6, $fontAmatic, $title, 610));
 } else if (strlen($title) >= 20) {
-    imagettftext($dest, 90, 6, 120, 420, $primary, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 90, 6, 120, 420, $white, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 610));
 } else if (strlen($title) >= 10) {
-    imagettftext($dest, 100, 6, 125, 470, $primary, $fontAmatic, $title);
+    imagettftext($dest, 100, 6, 125, 470, $white, $fontAmatic, $title);
 } else {
-    imagettftext($dest, 150, 6, 165, 470, $primary, $fontAmatic, $title);
+    imagettftext($dest, 150, 6, 165, 470, $white, $fontAmatic, $title);
 }
 
 //gros mot
-$src = imagecreatefrompng('./images/JAUNE/gros_mot/Gros_Mot.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/gros-mot/Gros_Mot.png');
 imagecopymerge_alpha($dest, $src, 0, 1100, 0, 0, 971, 557, 100);
 $title = $_POST['gros_mot'];
+$colorGrosMot = ($_POST['color'] == 'VERT') ? $secondary : $tertiary;
+$colorGrosMot = ($_POST['color'] == 'VIOLET') ? $primary : $colorGrosMot;
 if (strlen($title) >= 20) {
-    imagettftext($dest, 90, 6, 120, 1380, $primary, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 90, 6, 120, 1380, $colorGrosMot, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 610));
 } else if (strlen($title) >= 10) {
-    imagettftext($dest, 100, 6, 70, 1470, $primary, $fontAmatic, $title);
+    imagettftext($dest, 100, 6, 70, 1470, $colorGrosMot, $fontAmatic, $title);
 } else {
-    imagettftext($dest, 170, 6, 180, 1490, $primary, $fontAmatic, $title);
+    imagettftext($dest, 170, 6, 180, 1480, $colorGrosMot, $fontAmatic, $title);
 }
 
 //Livre
-$src = imagecreatefrompng('./images/JAUNE/livre/Livre.png');
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/livre/Livre.png');
 imagecopymerge_alpha($dest, $src, 1220, 1770, 0, 0, 744, 1033, 100);
+$colorLivre = $_POST['color'] == 'VERT' ? $tertiary : $primary;
 $title = $_POST['livre'];
 if (strlen($title) >= 52) {
-    imagettftext($dest, 60, 21, 1420, 2300, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 400));
+    imagettftext($dest, 60, 21, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 400));
 } else if (strlen($title) >= 35) {
-    imagettftext($dest, 65, 21, 1420, 2300, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 400));
+    imagettftext($dest, 65, 21, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 400));
 } else if (strlen($title) >= 20) {
-    imagettftext($dest, 75, 21, 1420, 2300, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
+    imagettftext($dest, 75, 21, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else if (strlen($title) >= 10) {
-    imagettftext($dest, 75, 21, 1400, 2300, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
+    imagettftext($dest, 75, 21, 1400, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else {
-    imagettftext($dest, 85, 21, 1380, 2300, $primary, $fontAmatic, $title);
+    imagettftext($dest, 85, 21, 1380, 2300, $colorLivre, $fontAmatic, $title);
 }
 
 //Musique
-$src = imagecreatefrompng('./images/JAUNE/musique/Musique.png');
-imagecopymerge_alpha($dest, $src, 1220, 1770, 0, 0, 1213, 1647, 100);
+$src = imagecreatefrompng('./images/'. $_POST['color'] . '/musique/Musique.png');
+imagecopymerge_alpha($dest, $src, 0, 1680, 0, 0, 1329, 1637, 100);
 $title = $_POST['chanson'];
 if (strlen($title) >= 35) {
-    imagettftext($dest, 80, 15, 620, 2400, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 500));
+    imagettftext($dest, 80, 15, 620, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 500));
 } else if (strlen($title) >= 20) {
-    imagettftext($dest, 75, 21, 1420, 2300, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
+    imagettftext($dest, 75, 21, 700, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else if (strlen($title) >= 10) {
-    imagettftext($dest, 75, 21, 1400, 2300, $primary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
+    imagettftext($dest, 75, 21, 700, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else {
-    imagettftext($dest, 85, 21, 1380, 2300, $primary, $fontAmatic, $title);
+    imagettftext($dest, 125, 21, 740, 2460, $tertiary, $fontAmatic, $title);
 }
 
 // Date
-imagettftext($dest, 180, 0, 1400, 240, $primary, $fontQuick, date('d.n.Y'));
+imagettftext($dest, 180, 0, 1385, 240, $tertiary, $fontQuick, date('d.n.y'));
 
 // Hashtag
 $hashtag = "#" . $_POST['hashtag'];
 if (strlen($hashtag) <= 6) {
-    imagettftext($dest, 300, 90, 2280, 2600, $primary, $fontAmatic, $hashtag);
+    imagettftext($dest, 320, 90, 2285, 2750, $primary, $fontAmatic, $hashtag);
 } else if (strlen($hashtag) <= 9) {
-    imagettftext($dest, 200, 90, 2230, 2620, $primary, $fontAmatic, $hashtag);
-} else if (strlen($hashtag) <= 12) {
-    imagettftext($dest, 150, 90, 2200, 2620, $primary, $fontAmatic, $hashtag);
+    imagettftext($dest, 220, 90, 2230, 2800, $primary, $fontAmatic, $hashtag);
+} else if (strlen($hashtag) <= 15) {
+    imagettftext($dest, 170, 90, 2250, 2800, $primary, $fontAmatic, $hashtag);
 }
 
 
-// Affichage et libération de la mémoire
-header('Content-Type: image/jpeg');
-imagejpeg($dest);
+$path = "./images/generated/". $_POST['email'] . date('dnyhs') . ".jpeg";
+imagejpeg( $dest, $path);
+header('Location: fin.php?src='. $path);
+
+// header('Content-Type: image/jpeg');
+// imagejpeg( $dest);
 
 imagedestroy($dest);
 imagedestroy($src);

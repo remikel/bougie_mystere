@@ -1,23 +1,12 @@
 <?php include 'header.php'; ?>
 <div class="section-rm">
     <div class="flex-container">
-        <button class="btn base" id="try2">
-            J'ai trouvé le code
-        </button>
-        <div class="answer" id="solution2">
-            2547
-        </div>
-        <button class="btn base" id="solution">
-            Je veux la solution
-        </button>
-        <div class="try">
-            <div>
-                <input class="css-input" type="text" placeholder="Entre le code" id="code">
-                <button class="btn" id="go">
-                    Envoyer
-                </button>
-                <div id="error">Ce n'est pas ça ! Essaie encore !</div>
+        <div>
+            <div class="text-end">
+                <h1>Et voilà votre image :</h1>
+                <p>Vous pouvez la télécharger (clique-droit puis "enregistrer l'image sous") et l'imprimer ou la mettre en fond d'écran !</p>
             </div>
+            <a href="<?= $_GET['src'] ?>" target="_blank"><img src="<?= $_GET['src'] ?>" alt="Votre image personnalisée" class="img-generated"></a>
         </div>
     </div>
 </div>

@@ -9,6 +9,8 @@ body {
     background-image: url("./images/background/bg.jpg");
     background-position: center;
     z-index: 99;
+    margin-left:auto;
+    margin-right:auto;
 }
 .felicitation{
     padding:10px;
@@ -32,6 +34,8 @@ body {
 .flex-container {
     max-width: 1080px;
     min-height: 100%;
+    margin-left:auto;
+    margin-right:auto;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -109,4 +113,12 @@ select {
     background-color: #f5b713;
     background: rgb(35, 163, 125);
     background: linear-gradient(90deg, rgba(35, 163, 125, 1) 3%, rgba(255, 135, 105, 1) 22%, rgba(221, 13, 13, 1) 89%);
+}
+.img-generated{
+    max-height:50vh;
+}
+.text-end {
+    padding:5px;
+    background-color: #f5b713;
+    margin-bottom:10px;
 }
