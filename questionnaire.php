@@ -28,7 +28,7 @@
                     </div>
 
                     <div id="etape1_recherche" class="div_cache" style="display:none; text-align:center;">
-                        <div>Quelle chanson que t'écoutes le plus ces jours-ci ?</div>
+                        <div>Quelle chanson tu écoutes le plus ces jours-ci ?</div>
                         <input required type="text" name="chanson" value="" maxlength="35" placeholder="" class="champtxt" />
 
                         <div>Tu te sens comme quel animal aujourd'hui ?</div>
@@ -66,8 +66,8 @@
                     </div>
 
                     <div id="etape2_recherche" class="div_cache" style="display:none; text-align:center;">
-                        <div>Hashtage de ta journée :</div>
-                        <input required type="text" name="hashtag" value="" maxlength="14" placeholder="" class="champtxt" />
+                        <div>Hashtag de ta journée :</div>
+                        #<input required type="text" name="hashtag" value="" maxlength="14" placeholder="" class="champtxt" />
 
                         <div>Ton sport préféré, ce serait :</div>
                         <select required name="sports" id="pet-select" class="champtxt" required>
@@ -100,7 +100,7 @@
                             <option value="cannele">Des cannelés</option>
                         </select>
 
-                        <div>Le dernier film qui t'a retourné :</div>
+                        <div>Le dernier film qui t'a retourné(e) :</div>
                         <input required type="text" name="film" maxlength="52" value="" placeholder="" class="champtxt" />
 
                         <br /><button class="btn etape_precedente" etape="2">Précédente</button>
@@ -144,7 +144,7 @@
                             <option value="8">8</option>
                             <option value="9">9</option>
                         </select>
-                        <div class="titre">Quel ambiance te plait ? </div>
+                        <div class="titre">Quelle ambiance colorée te plait ? </div>
                         <select required name="color" id="pet-select" class="champtxt" required>
                             <option value="">Choisis</option>
                             <option value="BLEU" style="background: #00435a">Bleu</option>
@@ -155,7 +155,7 @@
                         </select>
 
                         <div>Ton e-mail pour terminer :</div>
-                        <input required type="email" name="email" value="" placeholder="" maxlength="25" class="champtxt" />
+                        <input required type="email" name="email" value="" placeholder="" class="champtxt" />
 
                         <br /><button class="btn etape_precedente" etape="3">Précédente</button>
                         <button class="btn etape_suivante" etape="3">Suivante</button>

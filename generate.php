@@ -193,10 +193,44 @@ if (strlen($hashtag) <= 6) {
 
 $path = "./images/generated/". $_POST['email'] . date('dnyhs') . ".jpeg";
 imagejpeg( $dest, $path);
-header('Location: fin.php?src='. $path);
 
 // header('Content-Type: image/jpeg');
 // imagejpeg( $dest);
+
+require './vendor/autoload.php';
+use \Mailjet\Resources;
+use \Mailjet\Client;
+$mj = new Client('a1289d5009ad3b1720e5d4f71fcc0a6b', 'b783a5aa39dfd20b2a3df353c6f58672',true,['version' => 'v3.1']);
+$body = [
+    'Messages' => [
+        [
+            'From' => [
+                'Email' => "hello@noemiepulido-graphiste.com",
+                'Name' => "Le père Nono"
+            ],
+            'To' => [
+                [
+                    'Email' => $_POST['email']
+                ]
+            ],
+            'Subject' => "Votre image personnalisée !",
+            'HTMLPart' => "<h3>Encore félicitations d'avoir résolu la bougie mystère !</h3>Voici ton image personnalisée, j'espère qu'elle te plaît !<br>
+            N'hésite pas à t'abonner à mon compte <a href='https://www.instagram.com/noemie_pulido/'>Instagram @noemie_pulido</a> pour suivre mon actualité !<br>
+            N'hésite pas à répondre à ce mail si tu as des remarques ou des améliorations à suggérer sur le jeu de la bougie ;)",
+            'Attachments' => [
+                [
+                    'ContentType' => "text/plain",
+                    'Filename' => "mon-instant-du-" . date('dnyhs') . ".jpg",
+                    'Base64Content' => base64_encode(file_get_contents($path))
+                ]
+            ]
+        ]
+    ]
+];
+$response = $mj->post(Resources::$Email, ['body' => $body]);
+$response->success();
+
+header('Location: fin.php?src='. $path);
 
 imagedestroy($dest);
 imagedestroy($src);
