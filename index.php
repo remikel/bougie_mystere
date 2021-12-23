@@ -5,7 +5,7 @@
             J'ai trouvé le code
         </button>
         <div class="answer" id="solution2">
-        <p>JAUNE : Il faut utiliser les lettres sur les panneaux jaunes de la carte du monde. Pour chacune, prendre la lettre antérieure (exemple Q = P, B = A) permet de révéler les mots POISSON / PATTES / PERCHÉ
+            <p>JAUNE : Il faut utiliser les lettres sur les panneaux jaunes de la carte du monde. Pour chacune, prendre la lettre antérieure (exemple Q = P, B = A) permet de révéler les mots POISSON / PATTES / PERCHÉ
                 En réfléchissant à ces mots, on trouve leur point commun : le CHAT
                 Il suffit alors de compter le nombre de chats sur la carte du monde, il y en a 2 !
             </p>
@@ -44,7 +44,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <script>
     $('#solution').on('click', () => {
-        $('#solution2').fadeIn(500).fadeOut(5000)
+        $('#solution2').fadeIn(500).fadeOut(10000)
     })
     $('#try2').on('click', () => {
         $('.base').fadeOut()
