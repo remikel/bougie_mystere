@@ -121,11 +121,11 @@ $src = imagecreatefrompng('./images/'. $_POST['color'] . '/film/Film.png');
 imagecopymerge_alpha($dest, $src, 0, 0, 0, 0, 1457, 1102, 100);
 $title = $_POST['film'];
 if (strlen($title) >= 52) {
-    imagettftext($dest, 60, 6, 120, 370, $white, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 60, 6, 120, 370, $white, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 630));
 } else if (strlen($title) >= 35) {
-    imagettftext($dest, 70, 6, 120, 380, $white, $fontAmatic, wrap(70, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 70, 6, 120, 380, $white, $fontAmatic, wrap(70, 6, $fontAmatic, $title, 630));
 } else if (strlen($title) >= 20) {
-    imagettftext($dest, 90, 6, 120, 420, $white, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 610));
+    imagettftext($dest, 90, 6, 120, 420, $white, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 630));
 } else if (strlen($title) >= 10) {
     imagettftext($dest, 100, 6, 125, 470, $white, $fontAmatic, $title);
 } else {
@@ -141,7 +141,7 @@ $colorGrosMot = ($_POST['color'] == 'VIOLET') ? $primary : $colorGrosMot;
 if (strlen($title) >= 20) {
     imagettftext($dest, 90, 6, 120, 1380, $colorGrosMot, $fontAmatic, wrap(90, 6, $fontAmatic, $title, 610));
 } else if (strlen($title) >= 10) {
-    imagettftext($dest, 100, 6, 70, 1470, $colorGrosMot, $fontAmatic, $title);
+    imagettftext($dest, 120, 6, 140, 1470, $colorGrosMot, $fontAmatic, $title);
 } else {
     imagettftext($dest, 170, 6, 180, 1480, $colorGrosMot, $fontAmatic, $title);
 }
@@ -152,9 +152,9 @@ imagecopymerge_alpha($dest, $src, 1220, 1770, 0, 0, 744, 1033, 100);
 $colorLivre = $_POST['color'] == 'VERT' ? $tertiary : $primary;
 $title = $_POST['livre'];
 if (strlen($title) >= 52) {
-    imagettftext($dest, 60, 21, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 400));
+    imagettftext($dest, 60, 26, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else if (strlen($title) >= 35) {
-    imagettftext($dest, 65, 21, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 400));
+    imagettftext($dest, 65, 25, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else if (strlen($title) >= 20) {
     imagettftext($dest, 75, 21, 1420, 2300, $colorLivre, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
 } else if (strlen($title) >= 10) {
@@ -170,9 +170,9 @@ $title = $_POST['chanson'];
 if (strlen($title) >= 35) {
     imagettftext($dest, 80, 15, 620, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 500));
 } else if (strlen($title) >= 20) {
-    imagettftext($dest, 75, 21, 700, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
+    imagettftext($dest, 75, 21, 700, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 500));
 } else if (strlen($title) >= 10) {
-    imagettftext($dest, 75, 21, 700, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 300));
+    imagettftext($dest, 75, 21, 700, 2400, $tertiary, $fontAmatic, wrap(60, 6, $fontAmatic, $title, 500));
 } else {
     imagettftext($dest, 125, 21, 740, 2460, $tertiary, $fontAmatic, $title);
 }
@@ -193,9 +193,6 @@ if (strlen($hashtag) <= 6) {
 
 $path = "./images/generated/". $_POST['email'] . date('dnyhs') . ".jpeg";
 imagejpeg( $dest, $path);
-
-// header('Content-Type: image/jpeg');
-// imagejpeg( $dest);
 
 require './vendor/autoload.php';
 use \Mailjet\Resources;
@@ -231,6 +228,9 @@ $response = $mj->post(Resources::$Email, ['body' => $body]);
 $response->success();
 
 header('Location: fin.php?src='. $path);
+
+// header('Content-Type: image/jpeg');
+// imagejpeg( $dest);
 
 imagedestroy($dest);
 imagedestroy($src);
