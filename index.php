@@ -46,7 +46,7 @@ include 'header.php';
                 </div>
             </div>
             
-            <button class="btn base" id="solution">
+            <button class="btn base" id="solution" style="margin-top: 2rem;">
                 Je veux la solution
             </button>
             
@@ -84,14 +84,17 @@ include 'header.php';
 }
 
 .solution-item h3 {
-    color: var(--secondary-color);
+    color: #ffffff;
     margin-bottom: var(--spacing-md);
     font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .solution-item p {
     margin-bottom: var(--spacing-sm);
     line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .form-question {

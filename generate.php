@@ -9,17 +9,35 @@
 
 function imagecopymerge_alpha($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct)
 {
-    // creating a cut resource
+    // Création d'une ressource avec support de la transparence
     $cut = imagecreatetruecolor($src_w, $src_h);
-
-    // copying relevant section from background to the cut resource
+    
+    // Activer la transparence
+    imagealphablending($cut, false);
+    imagesavealpha($cut, true);
+    
+    // Remplir avec du transparent
+    $transparent = imagecolorallocatealpha($cut, 255, 255, 255, 127);
+    imagefilledrectangle($cut, 0, 0, $src_w, $src_h, $transparent);
+    
+    // Copier la section pertinente de l'arrière-plan
     imagecopy($cut, $dst_im, 0, 0, $dst_x, $dst_y, $src_w, $src_h);
-
-    // copying relevant section from watermark to the cut resource
+    
+    // Activer le mode de fusion alpha
+    imagealphablending($cut, true);
+    
+    // Copier la section pertinente de l'image source avec préservation de la transparence
     imagecopy($cut, $src_im, 0, 0, $src_x, $src_y, $src_w, $src_h);
-
-    // insert cut resource to destination image
-    imagecopymerge($dst_im, $cut, $dst_x, $dst_y, 0, 0, $src_w, $src_h, $pct);
+    
+    // Préserver la transparence sur l'image de destination
+    imagealphablending($dst_im, true);
+    imagesavealpha($dst_im, true);
+    
+    // Insérer la ressource découpée dans l'image de destination
+    imagecopy($dst_im, $cut, $dst_x, $dst_y, 0, 0, $src_w, $src_h);
+    
+    // Libérer la mémoire
+    imagedestroy($cut);
 }
 
 function wrap($fontSize, $angle, $fontFace, $string, $width)
@@ -44,35 +62,19 @@ function wrap($fontSize, $angle, $fontFace, $string, $width)
 }
 // Création des instances d'image
 // $dest = imagecreatefromjpeg('./images/full.jpg');
-$dest = imagecreate(2315, 3307);
+$dest = imagecreatetruecolor(2315, 3307);
+// Activer la transparence sur l'image principale
+imagealphablending($dest, false);
+imagesavealpha($dest, true);
+// Créer un arrière-plan blanc
 $white = imagecolorallocate($dest, 255, 255, 255);
-switch ($_POST['color']) {
-    case 'BLEU':
-        $primary = imagecolorallocate($dest, 0, 67, 90);
-        $secondary = imagecolorallocate($dest, 0, 220, 235);
-        $tertiary = imagecolorallocate($dest, 0, 253, 217);
-        break;
-    case 'VERT':
-        $primary = imagecolorallocate($dest, 0, 185, 107);
-        $secondary = imagecolorallocate($dest, 229, 245, 221);
-        $tertiary = imagecolorallocate($dest, 0, 92, 21);
-        break;
-    case 'ROSE':
-        $primary = imagecolorallocate($dest, 232, 65, 33);
-        $secondary = imagecolorallocate($dest, 249, 216, 214);
-        $tertiary = imagecolorallocate($dest, 233, 153, 0);
-        break;
-    case 'JAUNE':
-        $primary = imagecolorallocate($dest, 255, 97, 0);
-        $secondary = imagecolorallocate($dest, 255, 181, 0);
-        $tertiary = imagecolorallocate($dest, 164, 16, 156);
-        break;
-    case 'VIOLET':
-        $primary = imagecolorallocate($dest, 161, 72, 181);
-        $secondary = imagecolorallocate($dest, 232, 206, 253);
-        $tertiary = imagecolorallocate($dest, 255, 208, 0);
-        break;
-}
+imagefill($dest, 0, 0, $white);
+// Activer le mode de fusion pour les superpositions
+imagealphablending($dest, true);
+// Couleurs fixes pour le thème ROSE
+$primary = imagecolorallocate($dest, 232, 65, 33);
+$secondary = imagecolorallocate($dest, 249, 216, 214);
+$tertiary = imagecolorallocate($dest, 233, 153, 0);
 $white = imagecolorallocate($dest, 255, 255, 255);
 $fontAmatic = './fonts/AmaticSC-Bold.ttf';
 $fontQuick = './fonts/Quicksand-Bold.ttf';
@@ -81,43 +83,43 @@ $fontQuick = './fonts/Quicksand-Bold.ttf';
 
 // // Copie et fusionne
 //Animaux
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/animaux/' . $_POST['animaux'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/animaux/' . $_POST['animaux'] . '.png');
 imagecopymerge_alpha($dest, $src, 830, 1105, 0, 0, 921, 925, 100);
 
 //Boisson
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/boissons/' . $_POST['boissons'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/boissons/' . $_POST['boissons'] . '.png');
 imagecopymerge_alpha($dest, $src, 1737, 290, 0, 0, 577, 1101, 100);
 
 //Dessert
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/desserts/' . $_POST['desserts'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/desserts/' . $_POST['desserts'] . '.png');
 imagecopymerge_alpha($dest, $src, 690, 2685, 0, 0, 738, 623, 100);
 
 //chiffres
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/chiffres/' . $_POST['chiffres'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/chiffres/' . $_POST['chiffres'] . '.png');
 imagecopymerge_alpha($dest, $src, 370, 2930, 0, 0, 326, 375, 100);
 
 //plante
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/plantes1/' . $_POST['plantes'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/plantes1/' . $_POST['plantes'] . '.png');
 imagecopymerge_alpha($dest, $src, 10, 895, 0, 0, 1215, 210, 100);
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/plantes3/' . $_POST['plantes'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/plantes3/' . $_POST['plantes'] . '.png');
 imagecopymerge_alpha($dest, $src, 6, 1657, 0, 0, 496, 554, 100);
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/plantes2/' . $_POST['plantes'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/plantes2/' . $_POST['plantes'] . '.png');
 imagecopymerge_alpha($dest, $src, 1750, 1385, 0, 0, 573, 380, 100);
 
 //sport
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/sports1/' . $_POST['sports'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/sports1/' . $_POST['sports'] . '.png');
 imagecopymerge_alpha($dest, $src, 805, 300, 0, 0, 1091, 811, 100);
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/sports2/' . $_POST['sports'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/sports2/' . $_POST['sports'] . '.png');
 $src = imagescale($src, 230);
 imagecopymerge_alpha($dest, $src, 0, 2057, 0, 0, 230, 368, 100);
 
 //transport
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/transports/' . $_POST['transports'] . '.png');
+$src = imagecreatefrompng('./images/ROSE/transports/' . $_POST['transports'] . '.png');
 imagecopymerge_alpha($dest, $src, 1420, 2800, 0, 0, 892, 504, 100);
 
 
 //Film
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/film/Film.png');
+$src = imagecreatefrompng('./images/ROSE/film/Film.png');
 imagecopymerge_alpha($dest, $src, 0, 0, 0, 0, 1457, 1102, 100);
 $title = $_POST['film'];
 if (strlen($title) >= 52) {
@@ -133,7 +135,7 @@ if (strlen($title) >= 52) {
 }
 
 //gros mot
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/gros-mot/Gros_Mot.png');
+$src = imagecreatefrompng('./images/ROSE/gros-mot/Gros_Mot.png');
 imagecopymerge_alpha($dest, $src, 0, 1100, 0, 0, 971, 557, 100);
 $title = $_POST['gros_mot'];
 $colorGrosMot = ($_POST['color'] == 'VERT') ? $secondary : $tertiary;
@@ -147,7 +149,7 @@ if (strlen($title) >= 20) {
 }
 
 //Livre
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/livre/Livre.png');
+$src = imagecreatefrompng('./images/ROSE/livre/Livre.png');
 imagecopymerge_alpha($dest, $src, 1220, 1770, 0, 0, 744, 1033, 100);
 $colorLivre = $_POST['color'] == 'VERT' ? $tertiary : $primary;
 $title = $_POST['livre'];
@@ -164,7 +166,7 @@ if (strlen($title) >= 52) {
 }
 
 //Musique
-$src = imagecreatefrompng('./images/'. $_POST['color'] . '/musique/Musique.png');
+$src = imagecreatefrompng('./images/ROSE/musique/Musique.png');
 imagecopymerge_alpha($dest, $src, 0, 1680, 0, 0, 1329, 1637, 100);
 $title = $_POST['chanson'];
 if (strlen($title) >= 35) {
