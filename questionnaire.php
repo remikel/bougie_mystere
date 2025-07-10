@@ -295,72 +295,12 @@ include 'header.php';
                         <div class="step-header">
                             <div class="step-icon">🎨</div>
                             <h2>Touche finale</h2>
-                            <p>Choisissons ton univers coloré</p>
+                            <p>Quelques derniers détails pour personnaliser ton univers</p>
                         </div>
 
                         <div class="questions-grid">
-                            <div class="question-card full-width">
-                                <label class="question-label">
-                                    <span class="question-icon">🌈</span>
-                                    Quelle ambiance colorée te correspond ?
-                                </label>
-                                <div class="color-palette">
-                                    <label class="color-choice" for="color-bleu">
-                                        <input type="radio" name="color" value="BLEU" id="color-bleu" required>
-                                        <div class="color-preview bleu">
-                                            <div class="color-circle"></div>
-                                            <div class="color-info">
-                                                <strong>Bleu Océan</strong>
-                                                <span>Profondeur et sérénité</span>
-                                            </div>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="color-choice" for="color-vert">
-                                        <input type="radio" name="color" value="VERT" id="color-vert" required>
-                                        <div class="color-preview vert">
-                                            <div class="color-circle"></div>
-                                            <div class="color-info">
-                                                <strong>Vert Nature</strong>
-                                                <span>Fraîcheur et harmonie</span>
-                                            </div>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="color-choice" for="color-rose">
-                                        <input type="radio" name="color" value="ROSE" id="color-rose" required>
-                                        <div class="color-preview rose">
-                                            <div class="color-circle"></div>
-                                            <div class="color-info">
-                                                <strong>Rouge Passion</strong>
-                                                <span>Énergie et chaleur</span>
-                                            </div>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="color-choice" for="color-violet">
-                                        <input type="radio" name="color" value="VIOLET" id="color-violet" required>
-                                        <div class="color-preview violet">
-                                            <div class="color-circle"></div>
-                                            <div class="color-info">
-                                                <strong>Violet Mystique</strong>
-                                                <span>Créativité et magie</span>
-                                            </div>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="color-choice" for="color-jaune">
-                                        <input type="radio" name="color" value="JAUNE" id="color-jaune" required>
-                                        <div class="color-preview jaune">
-                                            <div class="color-circle"></div>
-                                            <div class="color-info">
-                                                <strong>Jaune Solaire</strong>
-                                                <span>Joie et optimisme</span>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
+                            <!-- Color automatically set to ROSE -->
+                            <input type="hidden" name="color" value="ROSE">
 
                             <div class="question-card full-width">
                                 <label class="question-label">
@@ -623,7 +563,6 @@ include 'header.php';
     padding: var(--spacing-lg);
     background: rgba(255, 255, 255, 0.8);
     border-radius: var(--border-radius);
-    border: 2px solid rgba(190, 18, 115, 0.1);
 }
 
 .feature-icon {
@@ -729,65 +668,6 @@ include 'header.php';
     background: transparent;
 }
 
-/* Color Palette */
-.color-palette {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
-}
-
-.color-choice {
-    cursor: pointer;
-}
-
-.color-choice input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.color-preview {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius);
-    border: 2px solid transparent;
-    transition: var(--transition);
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.color-choice input:checked + .color-preview {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(190, 18, 115, 0.1);
-    transform: scale(1.02);
-}
-
-.color-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.color-preview.bleu .color-circle { background: linear-gradient(135deg, #00435a, #00dceb); }
-.color-preview.vert .color-circle { background: linear-gradient(135deg, #00b96b, #e5f5dd); }
-.color-preview.rose .color-circle { background: linear-gradient(135deg, #e84121, #f9d8d6); }
-.color-preview.violet .color-circle { background: linear-gradient(135deg, #a148b5, #e8cefd); }
-.color-preview.jaune .color-circle { background: linear-gradient(135deg, #ff6100, #ffb500); }
-
-.color-info strong {
-    display: block;
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-xs);
-}
-
-.color-info span {
-    color: #666;
-    font-size: 0.9rem;
-}
 
 /* Navigation */
 .step-navigation {
@@ -854,10 +734,6 @@ include 'header.php';
         grid-template-columns: 1fr;
     }
     
-    .color-palette {
-        grid-template-columns: 1fr;
-    }
-    
     .step-navigation {
         flex-direction: column;
     }
@@ -903,6 +779,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (validateStep(step)) {
                 currentStep = step + 1;
                 showStep(currentStep);
+                // Scroll to top of the form
+                document.querySelector('#questionnaire-form').scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
@@ -913,6 +791,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const step = parseInt(this.dataset.step);
             currentStep = step - 1;
             showStep(currentStep);
+            // Scroll to top of the form
+            document.querySelector('#questionnaire-form').scrollIntoView({ behavior: 'smooth' });
         });
     });
     

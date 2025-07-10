@@ -32,11 +32,6 @@ include 'header.php';
                 </div>
                 <h1>Félicitations !</h1>
                 <h2>Voici ton illustration personnalisée</h2>
-                <p class="result-intro">
-                    Ton univers unique a été créé ! Cette illustration reflète tes goûts, 
-                    ta personnalité et ton instant présent. Elle est entièrement unique, 
-                    comme toi !
-                </p>
             </div>
 
             <div class="image-showcase">
@@ -68,16 +63,16 @@ include 'header.php';
 
             <div class="action-buttons">
                 <a href="<?= htmlspecialchars($imageSrc) ?>" 
-                   class="btn btn-primary" 
+                   class="btn btn-primary btn-compact" 
                    download="mon-illustration-bougie-mystere.jpg"
                    target="_blank">
-                    💾 Télécharger mon illustration
+                    💾 Télécharger
                 </a>
-                <button class="btn btn-secondary" onclick="shareImage()">
+                <button class="btn btn-secondary btn-compact" onclick="shareImage()">
                     📤 Partager
                 </button>
-                <a href="questionnaire.php" class="btn btn-outline">
-                    🎨 Créer une nouvelle illustration
+                <a href="questionnaire.php" class="btn btn-outline btn-compact">
+                    🎨 Nouvelle illustration
                 </a>
             </div>
 
@@ -276,10 +271,16 @@ include 'header.php';
 
 .action-buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
+    flex-wrap: nowrap;
+    gap: var(--spacing-sm);
     justify-content: center;
     margin-bottom: var(--spacing-xxl);
+}
+
+.btn-compact {
+    font-size: 0.9rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    white-space: nowrap;
 }
 
 .sharing-section {
@@ -435,13 +436,15 @@ include 'header.php';
     }
     
     .action-buttons {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap;
+        gap: var(--spacing-xs);
     }
     
-    .action-buttons .btn {
-        width: 100%;
-        max-width: 300px;
+    .btn-compact {
+        font-size: 0.8rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        flex: 1;
+        text-align: center;
     }
     
     .social-links {

@@ -13,7 +13,7 @@
     
     /* Typography */
     --font-primary: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-display: "AmaticSC", cursive;
+    --font-display: "Quicksand", sans-serif;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -298,6 +298,12 @@ select.champtxt {
     margin-top: var(--spacing-md);
     border: 1px solid rgba(231, 76, 60, 0.3);
     display: none;
+}
+
+#error.success-message {
+    color: #27ae60;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.3);
 }
 
 /* ===== Progress Indicator ===== */
