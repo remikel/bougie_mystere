@@ -1,0 +1,63 @@
+/* Header Styles for Clean Layout */
+
+.main-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(68, 38, 103, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-section {
+    text-align: center;
+}
+
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.main-logo {
+    height: auto;
+    max-width: 100%;
+    filter: drop-shadow(0 2px 4px rgba(68, 38, 103, 0.1));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .main-logo {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 0.5rem 0;
+    }
+    
+    .main-logo {
+        max-width: 160px;
+    }
+}

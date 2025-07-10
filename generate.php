@@ -202,7 +202,7 @@ $body = [
     'Messages' => [
         [
             'From' => [
-                'Email' => "hello@noemiepulido-graphiste.com",
+                'Email' => "hello@noemie-pulido.fr",
                 'Name' => "Le père Nono"
             ],
             'To' => [
@@ -227,7 +227,9 @@ $body = [
 $response = $mj->post(Resources::$Email, ['body' => $body]);
 $response->success();
 
-header('Location: fin.php?src='. $path);
+// Remove the ./ prefix from the path for fin.php compatibility
+$relativePath = ltrim($path, './');
+header('Location: fin.php?src='. urlencode($relativePath));
 
 // header('Content-Type: image/jpeg');
 // imagejpeg( $dest);

@@ -5,8 +5,6 @@ $csrfToken = Security::generateCSRFToken();
 include 'header.php'; 
 ?>
 
-<link href="css/modern-style.css" rel="stylesheet">
-
 <div class="section-rm">
     <div class="flex-container">
         <div class="game-container">
@@ -98,13 +96,13 @@ include 'header.php';
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--white);
     margin-bottom: var(--spacing-md);
     text-align: center;
 }
 
 #code-hint {
-    color: rgba(68, 38, 103, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     font-style: italic;
     text-align: center;
 }

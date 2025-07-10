@@ -1,6 +1,20 @@
 body {
     font-family: "Quicksand", sans-serif;
-    color: #442667;
+    color: white;
+    background: linear-gradient(135deg, #442667 0%, #BE1273 50%, #F5B713 100%);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .section-rm {
